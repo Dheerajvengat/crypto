@@ -1,0 +1,352 @@
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap) format('woff2');
+}
+
+nav {
+    background-color: #131414;
+}
+
+nav li {
+    display: inline-block;
+}
+
+
+nav a:hover {
+    color: #2FC0FF !important;
+}
+
+.menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: #ffffff;
+    margin-bottom: 3px;
+    border-radius: 20px;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+@media all and (max-width:950px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    ul {
+        text-align: center;
+        display: none;
+        margin-top: 26px;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .showmenu {
+        display: block;
+    }
+}
+
+/* button */
+.Btn-Container {
+    display: flex;
+    width: 170px;
+    height: fit-content;
+    background-color: transparent;
+    border-radius: 40px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #2FC0FF;
+    cursor: pointer;
+}
+
+.icon-Container {
+    width: 50px;
+    height: 45px;
+    background-color: #2FC0FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: transparent;
+    margin-right: -10px;
+}
+
+.text {
+    width: calc(170px - 45px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2FC0FF;
+    font-size: 1.1em;
+    letter-spacing: 1.2px;
+}
+
+.icon-Container svg {
+    transition-duration: 1.5s;
+}
+
+.Btn-Container:hover .icon-Container svg {
+    transition-duration: 1.5s;
+    animation: arrow 1s linear infinite;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        margin-left: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 10px;
+    }
+}
+
+/* button end */
+
+/* marquee */
+.mar_nav {
+    top: 109px !important;
+}
+
+.fixed-top-1 {
+    z-index: 1030;
+    top: 109px !important;
+}
+
+.text-green {
+    color: #8AFB51 !important;
+}
+
+body {
+
+    background-color: #0F0F0F;
+    font-family: "Jost" !important;
+
+}
+
+.bold-font {
+    font-family: "Jost bold";
+}
+
+.medium-font {
+    font-family: "Jost medium";
+}
+
+.fs-heading {
+    font-size: 52px !important;
+    font-weight: 900 !important;
+}
+
+@media (max-width: 576px) {
+    .fs-heading {
+        font-weight: 900 !important;
+        font-size: 40px !important;
+    }
+}
+
+.fs-sub-heading {
+    font-size: 40px !important;
+    font-weight: 900 !important;
+}
+
+@media (max-width: 576px) {
+    .fs-sub-heading {
+        font-weight: 900 !important;
+        font-size: 28px !important;
+    }
+}
+
+.fs-18 {
+    font-size: 18px !important;
+}
+
+.fs-16 {
+    font-size: 16px !important;
+}
+
+.fs-20 {
+    font-size: 20px !important;
+}
+
+.lh-68 {
+    line-height: 68px;
+}
+
+@media (max-width: 576px) {
+    .lh-68 {
+        line-height: 54px;
+    }
+}
+
+.text-color {
+    color: #CDCDCD;
+}
+
+.light {
+    margin-top: -280px;
+    margin-left: -390px;
+}
+
+.section-padding {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.bg-black {
+    background-color: #000000;
+    border: none;
+}
+
+.service-cards {
+    background-color: #0B0A0A;
+    padding: 35px 48px;
+    text-align: center;
+    height: 100%;
+    border-radius: 12px;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.card {
+    position: relative;
+    width: 270px;
+    height: 254px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 280px;
+    height: 264px;
+    border-radius: 10px;
+    background: linear-gradient(109.6deg,
+            rgba(112, 245, 255, 0.937) 11.2%,
+            rgba(221, 108, 241, 0.755) 42%,
+            rgba(228, 106, 253, 0.94) 71.5%,
+            rgba(123, 183, 253, 1) 100.2%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(109.6deg,
+            rgba(112, 245, 255, 0.937) 11.2%,
+            rgba(221, 108, 241, 0.755) 42%,
+            rgba(228, 106, 253, 0.94) 71.5%,
+            rgba(123, 183, 253, 1) 100.2%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.card p:not(.heading) {
+    font-size: 14px;
+}
+
+.card p:last-child {
+    color: #e81cff;
+    font-weight: 600;
+}
+
+.card:hover::after {
+    filter: blur(30px);
+}
+
+.card:hover::before {
+    transform: rotate(280deg) scaleX(1) scaleY(-1.11);
+}
+
+/* banner */
+.bg {
+    background-image: url(./img/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.section-padding-banner {
+    padding-top: 26px;
+    padding-bottom: 40px;
+}
+
+.color {
+    background: conic-gradient(from 90deg at 50% 50%, #B6D0F7, #C5C1F9, #FAFCFE, #BFF6F9, #CCBAE4, #B6D0F7);
+    padding: 34px 66px 50px 34px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    right: -144px;
+    top: 12px;
+}
+
+.heading2 {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.bg1 {
+    background-color: #0E1011;
+    color: #606063;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #323030;
+}
+
+.tubelight {
+    background-image: url(./img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.p-6 {
+    padding: 214px 299px 22px 290px;
+}
+
+@media (max-width: 1125px) {
+    .p-6 {
+        padding: 264px 63px 83px 27px;
+    }
+}
